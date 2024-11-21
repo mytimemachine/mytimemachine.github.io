@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MyTimeMachine: Personalized Facial Age Transformation.">
+  <meta name="keywords" content="MyTimeMachine">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyTimeMachine: Personalized Facial Age Transformation</title>
+
+  <!-- visiting analytics -->
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K35Z58E01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0K35Z58E01');
+  </script> -->
+
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕒</text></svg>">
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                                   css                                   -->
+  <!-- ----------------------------------------------------------------------- -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- icons -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <!-- https://jpswalsh.github.io/academicons/ -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- nerfies -->
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- reconfusion -->
+  <link rel="stylesheet" href="./static/css/app.css">
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                                   js                                    -->
+  <!-- ----------------------------------------------------------------------- -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+
+  <!-- mathjax -->
+  <!-- https://docs.mathjax.org/en/latest/web/configuration.html#using-a-local-file-for-configuration -->
+  <script src="./static/js/mathjax-config.js" defer></script>
+  <script type="text/javascript" id="MathJax-script" defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+
+  <!-- img comparison slider -->
+  <!-- https://github.com/sneas/img-comparison-slider -->
+  <!-- <script defer src="./static/js/image-comparison-slider.js"></script>
+  <link rel="stylesheet" href="./static/css/image-comparison-slider.css"/> -->
+
+  <!-- nerfies -->
+  <script src="./static/js/index.js"></script>
+  <!-- reconfusion -->
+  <script src="./static/js/app.js"></script>
+  
+</head>
+<body>
+
+
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://luchaoqi.com/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://cv.cs.unc.edu/" target="_blank">
+            CV@UNC
+          </a>
+        </div>
+      </div> -->
+
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          TOC
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="#abstract">
+            Abstract
+          </a>
+          <a class="navbar-item" href="#method">
+            Method
+          </a>
+          <a class="navbar-item" href="#results">
+            Results
+          </a>
+          <a class="navbar-item" href="#acknowledgements">
+            Acknowledgements
+          </a>
+          <a class="navbar-item" href="#bib">
+            BibTeX
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- ------------------------------- authors ------------------------------- -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MyTimeMachine: Personalized Facial Age Transformation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://luchaoqi.com/">Luchao Qi</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=g2CuYi4AAAAJ&hl=en">Jiaye Wu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/bang-gong-461862250/">Bang Gong</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/annie-w-928955101/">Annie N. Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.umd.edu/~djacobs/">David W. Jacobs</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.unc.edu/~ronisen/">Roni Sengupta</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of North Carolina at Chapel Hill,</span>
+            <span class="author-block"><sup>2</sup>The University of Maryland</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a 
+                   class="external-link button is-normal is-rounded is-dark" disabled
+                   target="_blank">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a 
+                   class="external-link button is-normal is-rounded is-dark" disabled
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+              <!-- Supplementary Link. -->
+              <!-- <span class="link-block">
+                <a href="./supplementary/result.html"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="ai ai-archive"></i>
+                  </span>
+                  <span>Supplementary</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------------------- teaser -------------------------------- -->
+<section class="hero teaser">
+  <div class="hero-body is-full-width container is-max-desktop">
+    <div class="columns">
+      <div class="column is-12">
+        <img src="./static/images/teaser.jpg"/>
+      </div>
+      <!-- <div class="column is-6">
+        <video id="paper-video" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4"
+                  type="video/mp4">
+        </video>
+      </div> -->
+    </div>
+    <h2 class="subtitle has-text-centered">
+      <span class="dnerf">MyTimeMachine</span> personalizes a pre-trained global aging prior using $\sim$50 personal selfies, allowing age regression (de-aging) and age progression (aging) with high fidelity and identity preservation.
+    </h2>
+  </div>
+</section>
+
+<!-- ------------------------------ abstract ------------------------------- -->
+<section class="section hero is-light" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Facial aging is a complex process, highly dependent on multiple factors like gender, ethnicity, lifestyle, etc., making it extremely challenging to learn a global aging prior to predict aging for any individual accurately. Existing techniques often produce realistic and plausible aging results, but the re-aged images often do not resemble the person's appearance at the target age and thus need personalization. In many practical applications of virtual aging, e.g. VFX in movies and TV shows, access to a personal photo collection of the user depicting aging in a small time interval (20$\sim$40 years) is often available. However, naive attempts to personalize global aging techniques on personal photo collections often fail. Thus, we propose MyTimeMachine (MyTM), which combines a global aging prior with a personal photo collection (using as few as 50 images) to learn a personalized age transformation.
+          We introduce a novel Adapter Network that combines personalized aging features with global aging features and generates a re-aged image with StyleGAN2. We also introduce three loss functions to personalize the Adapter Network with personalized aging loss, extrapolation regularization, and adaptive w-norm regularization. Our approach can also be extended to videos, achieving high-quality, identity-preserving, and temporally consistent aging effects that resemble actual appearances at target ages, demonstrating its superiority over state-of-the-art approaches.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/hENjfX8A7V0?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- ------------------------------- method -------------------------------- -->
+<section class="hero is-small">
+  <div class="hero body">
+    <div class="container is-max-desktop has-text-centered">
+      <br>
+      <h2 class="title is-3">Motivation: Why Age Transformation?</h2>
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/PP6JKR3KfUQ?rel=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <br>
+      <h2 class="title is-3" id="method">Method</h2>
+      <div class="item">
+        <img src="./static/images/architecture.jpg"/>
+        <h2 class="content has-text-justified">
+          Given an input face of $\textit{Oprah Winfrey}$ at 70 years old, our adapter re-ages her face to resemble her appearance at 30, while preserving the style of the input image.
+          To achieve personalized re-aging, we collect $\sim$50 images of an individual across different ages and train an adapter network that updates the latent code generated by the global age encoder SAM.
+          Our adapter preserves identity during interpolation when the target age falls within the range of ages seen in the training data, while also extrapolating well to unseen ages.
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ----------------------- downstream applications ----------------------- -->
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Animation</h2>
+
+      <!-- Age Regression Section -->
+      <div>
+        <h3 class="title is-4">Age Regression (De-aging from ~70 years old)</h3>
+        <div class="image-container" style="display: flex; justify-content: center; gap: 5px; margin-left: 20px; margin-right: 20px;">
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="regressionSourceImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>Source ~70 years old</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                          <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="regressionReferenceImage" src="" 
+                          onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" 
+                          onload="this.style.display='block'; this.nextElementSibling.style.display='none'">
+                    <div class="no-image" style="display: none;">No reference available <br> at this age</div>
+                </div>
+                <div>Reference</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="regressionOursImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>Ours (30~70)</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="regressionSamImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>SAM</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="regressionFadingImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>Fading</div>
+            </div>
+        </div>
+
+        <p class="text-justify" style="text-align: center; font-style: italic; font-size: large;">
+            <b style="background-color: yellow;">
+                Please try selecting different celebrities by clicking on the thumbnails. 
+                Move the slider to adjust the target age.
+            </b>
+        </p>
+
+        <div class="pill-row scene-pills has-text-centered" id="scene-pills-age-regression">
+          <span class="pill scene-pill active" data-value="al" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/al/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="charles" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/charles/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="chow" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/chow/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="elaine1" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/elaine1/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="elaine2" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/elaine2/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="elizabeth" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/elizabeth/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="jackie" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/jackie/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="morgan" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/morgan/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="oprah" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/oprah/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="robert" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/robert/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="robert2" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/robert2/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="thatcher" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_regression/thatcher/source.jpeg" width="64">
+          </span>
+        </div>
+            
+        <div style="width: 50%; text-align: center; margin: auto;">
+            <div style="position: relative; padding: 20px;">
+                <input
+                    type="range"
+                    class="styled-slider"
+                    id="regressionSlider"
+                    min="0"
+                    max="10"
+                    step="1"
+                    value="3"
+                    list="slider-labels"
+                    style="width: 100%;"
+                />
+                <datalist id="slider-labels" style="display: flex; justify-content: space-between; padding-top: 10px;">
+                    <option value="0" label="00">00</option>
+                    <option value="1" label="10">10</option>
+                    <option value="2" label="20">20</option>
+                    <option value="3" label="30">30</option>
+                    <option value="4" label="40">40</option>
+                    <option value="5" label="50">50</option>
+                    <option value="6" label="60">60</option>
+                    <option value="7" label="70">70</option>
+                    <option value="8" label="80">80</option>
+                    <option value="9" label="90">90</option>
+                    <option value="10" label="100">100</option>
+                </datalist>
+            </div>
+        </div>
+      </div>
+      <!-- Age Progression Section -->
+      <div>
+        <h3 class="title is-4">Age Progression (Aging from ~40 years old)</h3>
+            
+        <div class="image-container" style="display: flex; justify-content: center; gap: 5px; margin-left: 20px; margin-right: 20px;">
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="progressionSourceImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>Source ~40 years old</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                    id="progressionReferenceImage" src="" 
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" 
+                    onload="this.style.display='block'; this.nextElementSibling.style.display='none'">
+                    <div class="no-image" style="display: none;">No reference available <br> at this age</div>
+                </div>
+                <div>Reference</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="progressionOursImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>Ours (20~40)</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="progressionSamImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>SAM</div>
+            </div>
+            <div style="width: 20%; text-align: center;">
+                <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                    <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                          id="progressionFadingImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                </div>
+                <div>Fading</div>
+            </div>
+        </div>
+
+        <p class="text-justify" style="text-align: center; font-style: italic; font-size: large;">
+            <b style="background-color: yellow;">
+                Please try selecting different celebrities by clicking on the thumbnails. 
+                Move the slider to adjust the target age.
+            </b>
+        </p>
+
+        <div class="pill-row scene-pills has-text-centered" id="scene-pills-age-progression">
+          <span class="pill scene-pill active" data-value="al" onclick="selectCompMedia(activeMethodPill, this)">
+                <img class="thumbnail-img" src="static/images/comparisons/age_progression/al/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="charles" onclick="selectCompMedia(activeMethodPill, this)">
+                <img class="thumbnail-img" src="static/images/comparisons/age_progression/charles/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="diego" onclick="selectCompMedia(activeMethodPill, this)">
+                <img class="thumbnail-img" src="static/images/comparisons/age_progression/diego/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="elizabeth" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_progression/elizabeth/source.jpeg" width="64">
+            </span>
+          <span class="pill scene-pill" data-value="jennifer" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_progression/jennifer/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="oprah" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_progression/oprah/source.jpeg" width="64">
+          </span>
+          <span class="pill scene-pill" data-value="thatcher" onclick="selectCompMedia(activeMethodPill, this)">
+            <img class="thumbnail-img" src="static/images/comparisons/age_progression/thatcher/source.jpeg" width="64">
+          </span>
+        </div>
+
+        <div style="width: 50%; text-align: center; margin: auto;">
+            <div style="position: relative; padding: 20px;">
+                <input
+                    type="range"
+                    class="styled-slider"
+                    id="progressionSlider"
+                    min="0"
+                    max="10"
+                    step="1"
+                    value="3"
+                    list="slider-labels"
+                    style="width: 100%;"
+                />
+                <datalist id="slider-labels" style="display: flex; justify-content: space-between; padding-top: 10px;">
+                    <option value="0" label="00">00</option>
+                    <option value="1" label="10">10</option>
+                    <option value="2" label="20">20</option>
+                    <option value="3" label="30">30</option>
+                    <option value="4" label="40">40</option>
+                    <option value="5" label="50">50</option>
+                    <option value="6" label="60">60</option>
+                    <option value="7" label="70">70</option>
+                    <option value="8" label="80">80</option>
+                    <option value="9" label="90">90</option>
+                    <option value="10" label="100">100</option>
+                </datalist>
+            </div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+
+<!-- Q&A -->
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Q&A</h2>
+        <details>
+          <summary>
+            <span class="faq-question">Why personalize a GAN model using a few selfies instead of using only 1 selfie (image inversion)?</span>
+          </summary>
+          <p>
+            Inverting or overfitting to one single image can lead to identy drift when pose changes $i.e.$ it does not look like the same person when changing the pose (see image inversion results above). 
+            <br> 
+            More specifically, inversion technique can achieve the best pixel-wise reconstruction results <strong>under the same pose as the input image</strong> but may not be able to preserve the identity under different poses. Because the model is inferring faces using the knowledge learned from the pretrained prior (FFHQ) when the pose is different from the input image's pose. Thus it may either fail to reconstruct the face or reconstruct a different face under different poses.
+            <br>
+            On the other hand, personalization is inferring the faces under different poses using the knowledge learned from training selfies - thus a we want to train a personalized prior.
+          </p>
+        </details>
+        <details>
+          <summary>
+            <span class="faq-question">Why 3D face model instead of 2D face model?</span>
+          </summary>
+          <p>
+            Better multi-view consistency and less training data required - see <a href="https://mystyle-personalized-prior.github.io/">MyStyle</a> for more details.
+          </p>
+        </details>
+        <details>
+          <summary>
+            Why LoRA for personalization except saving storage?
+          </summary>
+          <p>
+            LoRA can help reduce artifacts caused by overfitting. We find that full-finetuning models tend to overfit to the training data and forget the pretrained knowledge. This can lead to artifacts in the downstream tasks e.g. in inversion task, naive finetuning can introduce rendering floaters and artifacts in facial texture/shape (see inverion results in main pdf).
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- bib -->
+<section class="section" id="bib">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{
+      coming soon
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a class="icon-link" href="https://github.com/luchaoqi" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template credits to 
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and 
+            <a href="https://reconfusion.github.io/">Reconfusion</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
