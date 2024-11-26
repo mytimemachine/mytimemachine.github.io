@@ -548,44 +548,18 @@
 </section>
 
 
-<!-- Q&A -->
-<!-- <section class="section">
+<!-- acknowledgements -->
+<section class="section" id="acknowledgements">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column">
-        <h2 class="title is-3">Q&A</h2>
-        <details>
-          <summary>
-            <span class="faq-question">Why personalize a GAN model using a few selfies instead of using only 1 selfie (image inversion)?</span>
-          </summary>
-          <p>
-            Inverting or overfitting to one single image can lead to identy drift when pose changes $i.e.$ it does not look like the same person when changing the pose (see image inversion results above). 
-            <br> 
-            More specifically, inversion technique can achieve the best pixel-wise reconstruction results <strong>under the same pose as the input image</strong> but may not be able to preserve the identity under different poses. Because the model is inferring faces using the knowledge learned from the pretrained prior (FFHQ) when the pose is different from the input image's pose. Thus it may either fail to reconstruct the face or reconstruct a different face under different poses.
-            <br>
-            On the other hand, personalization is inferring the faces under different poses using the knowledge learned from training selfies - thus a we want to train a personalized prior.
-          </p>
-        </details>
-        <details>
-          <summary>
-            <span class="faq-question">Why 3D face model instead of 2D face model?</span>
-          </summary>
-          <p>
-            Better multi-view consistency and less training data required - see <a href="https://mystyle-personalized-prior.github.io/">MyStyle</a> for more details.
-          </p>
-        </details>
-        <details>
-          <summary>
-            Why LoRA for personalization except saving storage?
-          </summary>
-          <p>
-            LoRA can help reduce artifacts caused by overfitting. We find that full-finetuning models tend to overfit to the training data and forget the pretrained knowledge. This can lead to artifacts in the downstream tasks e.g. in inversion task, naive finetuning can introduce rendering floaters and artifacts in facial texture/shape (see inverion results in main pdf).
-          </p>
-        </details>
-      </div>
+    <h2 class="title is-3">Acknowledgements</h2>
+    <div class="content">
+      <p>
+        We thank Noah Frahm for reviewing early drafts and suggesting improvements. We thank Yiran Xu for providing helpful suggestions. 
+        <!-- This work was supported by the National Science Foundation (NSF) under grant number xxx. We also thank the UNC Research Computing for providing computing resources. -->
+      </p>
     </div>
   </div>
-</section> -->
+</section>
 
 <!-- bib -->
 <section class="section" id="bib">
