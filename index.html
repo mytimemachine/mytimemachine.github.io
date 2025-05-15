@@ -123,6 +123,9 @@
           <a class="navbar-item" href="#results">
             Results
           </a>
+          <a class="navbar-item" href="#Q&A">
+            Q&A
+          </a>
           <a class="navbar-item" href="#acknowledgements">
             Acknowledgements
           </a>
@@ -577,6 +580,36 @@
   </div>
 </section>
 
+<!-- Q&A -->
+<section class="section" id="Q&A">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Q&A</h2>
+        <ol>
+          <li>
+            <h4 class="faq-question">Why GAN instead of Diffusion?</h4>
+            <p class="faq-answer">
+              At the time of this research, GAN handles better <a href="https://arxiv.org/abs/2106.05744">inversion-editing trade-off</a> than diffusion, thanks to the benefits of well-trained latent space of StyleGAN.
+              <br>
+              Empirically, we find that GAN can maintain input image's style (pose/lighting/expression/etc.) while providing good editing power for aging, which diffusion is not good at.
+              <br>
+              More specifically, we find that diffusion inversion/editing methods (rf-inversion/rf-solver-edit/etc.) are overfitting to the input image when editing the aging. See appendix for more details.
+            </p>
+          </li>
+          <li>
+            <h4 class="faq-question">Why face-swapping instead of direct video-based re-aging?</h4>
+            <p class="faq-answer">
+              At the time of this research, face-swapping is empirically better than direct video-based re-aging methods (e.g. <a href="https://stitch-time.github.io/">STIT</a> and <a href="https://video-edit-gan.github.io/">VideoEditGAN</a>) for aging.
+              <br>
+              'Better' here means less flickering / fast inference without pivotal tuning per frame / better quality etc. See pdf for more details.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- acknowledgements -->
 <section class="section" id="acknowledgements">
