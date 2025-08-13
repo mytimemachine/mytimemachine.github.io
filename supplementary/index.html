@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link>
+    <title>MyTimeMachine: Personalized Facial Age Transformation</title>
+    <meta content="text/html; utf-8" http-equiv="Content-Type">
+    <style type="text/css">
+        l, body, #wrapper
+        {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        img
+        {
+            border: 0;
+        }
+        
+        td
+        {
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .section
+        {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .subsection
+        {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .subsubsection
+        {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .navselected
+        {
+            color: #ff0000;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .navunselected
+        {
+            color: #4488ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    
+        a:link {color: #4488ff; text-decoration: underline; }
+        a:active {color: #4488ff; text-decoration: underline; }
+        a:visited {color: #4488ff; text-decoration: underline; }
+        a:hover {color: #ff0000; text-decoration: none; }
+    
+    
+    
+        .before,
+        .after {
+            margin: 0;
+        }
+    
+        .before figcaption,
+        .after figcaption {
+            background: #fff;
+            border: 1px solid #c0c0c0;
+            border-radius: 12px;
+            color: #2e3452;
+            opacity: 0.8;
+            padding: 12px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 100%;
+        }
+    
+        .before figcaption {
+            left: 12px;
+        }
+    
+        .after figcaption {
+            right: 12px;
+        }
+    </style>
+    
+    
+    <script defer src="./static/js/index.js"></script>
+    <link rel="stylesheet" href="./static/css/styles.css">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    
+    
+    <!-- nerfies -->
+    <link rel="stylesheet" href="./static/css/index.css">
+    <!-- reconfusion -->
+    <link rel="stylesheet" href="./static/css/app.css">
+    
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    
+    
+    <!-- nerfies -->
+    <script src="./static/js/index.js"></script>
+    <!-- reconfusion -->
+    <script src="./static/js/app.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="section" style="margin: 0px;">MyTimeMachine: Personalized Facial Age Transformation</div>
+        <div class="subsection" style="margin: 0px;">Supplementary Material</div>
+        
+        <div>
+            <!-- <div class="subsubsection">
+                We would like to additionally link to <a href="https://www.youtube.com/watch?v=PP6JKR3KfUQ" target="_blank">this external youtube video</a> that provides the motivation behind our work.
+            </div>
+            <br> -->
+            <!-- add image -->
+            <!-- <img src="teasers/teaser_supp.jpg" width="90%"> -->
+            <br>
+            <div>
+                <!-- <p>
+                    An overview of age regression (left) and age progression (right) for <a href="https://en.wikipedia.org/wiki/Al_Pacino" target="_blank"> Al Pacino</a>.
+                    Zoom in for better quality.
+                </p> -->
+                <!-- insert teaser video here -->
+                <video width="50%" controls>
+                    <source src="teasers/presentation_crf_25.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <p>Below, we provide more results of other celebrities.</p>
+
+        <div style="text-align: center;">
+            <a href="#">
+                <button class="backButton">
+                    Back to Top
+                </button>
+            </a>
+        </div>
+
+        <!-- Age Regression Section -->
+        <div class="section-container">
+            <h2 class="subsection hero is-light" style="padding: 20px;">Age Regression (De-aging from ~70 years old)</h2>
+			<br>
+            
+            <div class="image-container" style="display: flex; justify-content: center; gap: 5px; margin-left: 20px; margin-right: 20px;">
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="regressionSourceImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>Source ~70 years old</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                             <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="regressionReferenceImage" src="" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" 
+                             onload="this.style.display='block'; this.nextElementSibling.style.display='none'">
+                        <div class="no-image" style="display: none;">No reference available <br> at this age</div>
+                    </div>
+                    <div>Reference</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="regressionOursImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>Ours (30~70)</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="regressionSamImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>SAM</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="regressionFadingImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>Fading</div>
+                </div>
+            </div>
+
+            <p class="text-justify" style="text-align: center; font-style: italic; font-size: large;">
+                <b style="background-color: yellow;">
+                    Please try selecting different celebrities by clicking on the thumbnails. 
+                    Move the slider to adjust the target age.
+                </b>
+            </p>
+
+			<div class="pill-row scene-pills" id="scene-pills-age-regression">
+				<span class="pill scene-pill active" data-value="al" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/al/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="charles" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/charles/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="chow" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/chow/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="elaine1" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/elaine1/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="elaine2" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/elaine2/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="elizabeth" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/elizabeth/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="jackie" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/jackie/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="morgan" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/morgan/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="oprah" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/oprah/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="robert" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/robert/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="robert2" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/robert2/source.jpeg" width="64">
+				</span>
+				<span class="pill scene-pill" data-value="thatcher" onclick="selectCompMedia(activeMethodPill, this)">
+					<img class="thumbnail-img" src="results/comparisons/age_regression/thatcher/source.jpeg" width="64">
+				</span>
+			</div>
+            
+            <div style="width: 50%; text-align: center; margin: auto;">
+                <div style="position: relative; padding: 20px;">
+                    <input
+                        type="range"
+                        class="styled-slider"
+                        id="regressionSlider"
+                        min="0"
+                        max="10"
+                        step="1"
+                        value="3"
+                        list="slider-labels"
+                        style="width: 100%;"
+                    />
+                    <datalist id="slider-labels" style="display: flex; justify-content: space-between; padding-top: 10px;">
+                        <option value="0" label="00">00</option>
+                        <option value="1" label="10">10</option>
+                        <option value="2" label="20">20</option>
+                        <option value="3" label="30">30</option>
+                        <option value="4" label="40">40</option>
+                        <option value="5" label="50">50</option>
+                        <option value="6" label="60">60</option>
+                        <option value="7" label="70">70</option>
+                        <option value="8" label="80">80</option>
+                        <option value="9" label="90">90</option>
+                        <option value="10" label="100">100</option>
+                    </datalist>
+                </div>
+            </div>
+        </div>
+
+        <!-- Age Progression Section -->
+        <div class="section-container">
+            <h2 class="subsection hero is-light" style="padding: 20px;">Age Progression (Aging from ~40 years old)</h2>
+			<br>
+            
+            <div class="image-container" style="display: flex; justify-content: center; gap: 5px; margin-left: 20px; margin-right: 20px;">
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="progressionSourceImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>Source ~40 years old</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                        id="progressionReferenceImage" src="" 
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" 
+                        onload="this.style.display='block'; this.nextElementSibling.style.display='none'">
+                        <div class="no-image" style="display: none;">No reference available <br> at this age</div>
+                    </div>
+                    <div>Reference</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="progressionOursImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>Ours (20~40)</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="progressionSamImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>SAM</div>
+                </div>
+                <div style="width: 20%; text-align: center;">
+                    <div style="aspect-ratio: 1; display: flex; justify-content: center; align-items: center;">
+                        <img class="image" style="max-width: 100%; max-height: 100%; object-fit: contain;" 
+                             id="progressionFadingImage" src="" onerror="this.style.display='none'" onload="this.style.display='block'">
+                    </div>
+                    <div>Fading</div>
+                </div>
+            </div>
+
+            <p class="text-justify" style="text-align: center; font-style: italic; font-size: large;">
+                <b style="background-color: yellow;">
+                    Please try selecting different celebrities by clicking on the thumbnails. 
+                    Move the slider to adjust the target age.
+                </b>
+            </p>
+            
+            <div class="pill-row scene-pills" id="scene-pills-age-progression">
+                <div class="pill-row scene-pills" id="scene-pills-age-progression">
+                    <span class="pill scene-pill active" data-value="al" onclick="selectCompMedia(activeMethodPill, this)">
+                          <img class="thumbnail-img" src="results/comparisons/age_progression/al/source.jpeg" width="64">
+                    </span>
+                    <span class="pill scene-pill" data-value="charles" onclick="selectCompMedia(activeMethodPill, this)">
+                          <img class="thumbnail-img" src="results/comparisons/age_progression/charles/source.jpeg" width="64">
+                    </span>
+                    <span class="pill scene-pill" data-value="diego" onclick="selectCompMedia(activeMethodPill, this)">
+                          <img class="thumbnail-img" src="results/comparisons/age_progression/diego/source.jpeg" width="64">
+                    </span>
+                    <span class="pill scene-pill" data-value="elizabeth" onclick="selectCompMedia(activeMethodPill, this)">
+                      <img class="thumbnail-img" src="results/comparisons/age_progression/elizabeth/source.jpeg" width="64">
+                      </span>
+                    <span class="pill scene-pill" data-value="jennifer" onclick="selectCompMedia(activeMethodPill, this)">
+                      <img class="thumbnail-img" src="results/comparisons/age_progression/jennifer/source.jpeg" width="64">
+                    </span>
+                    <span class="pill scene-pill" data-value="oprah" onclick="selectCompMedia(activeMethodPill, this)">
+                      <img class="thumbnail-img" src="results/comparisons/age_progression/oprah/source.jpeg" width="64">
+                    </span>
+                    <span class="pill scene-pill" data-value="thatcher" onclick="selectCompMedia(activeMethodPill, this)">
+                      <img class="thumbnail-img" src="results/comparisons/age_progression/thatcher/source.jpeg" width="64">
+                    </span>
+                </div>
+            </div>
+
+            <div style="width: 50%; text-align: center; margin: auto;">
+                <div style="position: relative; padding: 20px;">
+                    <input
+                        type="range"
+                        class="styled-slider"
+                        id="progressionSlider"
+                        min="0"
+                        max="10"
+                        step="1"
+                        value="3"
+                        list="slider-labels"
+                        style="width: 100%;"
+                    />
+                    <datalist id="slider-labels" style="display: flex; justify-content: space-between; padding-top: 10px;">
+                        <option value="0" label="00">00</option>
+                        <option value="1" label="10">10</option>
+                        <option value="2" label="20">20</option>
+                        <option value="3" label="30">30</option>
+                        <option value="4" label="40">40</option>
+                        <option value="5" label="50">50</option>
+                        <option value="6" label="60">60</option>
+                        <option value="7" label="70">70</option>
+                        <option value="8" label="80">80</option>
+                        <option value="9" label="90">90</option>
+                        <option value="10" label="100">100</option>
+                    </datalist>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
