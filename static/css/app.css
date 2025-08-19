@@ -259,6 +259,26 @@ input:checked + .slider:after
     margin-right: .25em;
 }
 
+.gradient-color-text {
+  background: linear-gradient(
+    90deg,
+    #ff0000,   /* Red */
+    #ff9900,   /* Orange */
+    #bbee00,   /* Yellow */
+    #33ff00,   /* Green */
+    #00bbee,   /* Cyan */
+    #0066ff,   /* Blue */
+    #cc00ff,   /* Purple */
+    #ff0000    /* Red again for seamless loop */
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 1.5s linear infinite;
+}
+
 .backButton {
   position: fixed;
   bottom: 20px;
@@ -271,6 +291,11 @@ input:checked + .slider:after
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@keyframes gradient-move {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* Q&A section enhancements */
