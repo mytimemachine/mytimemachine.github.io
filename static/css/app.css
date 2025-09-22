@@ -259,6 +259,20 @@ input:checked + .slider:after
     margin-right: .25em;
 }
 
+.backButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .gradient-color-text {
   background: linear-gradient(
     90deg,
@@ -279,19 +293,6 @@ input:checked + .slider:after
   animation: gradient-move 1.5s linear infinite;
 }
 
-.backButton {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 @keyframes gradient-move {
   to {
     background-position: 200% center;
